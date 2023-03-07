@@ -12,6 +12,7 @@ const requestHandler = (req, res) => {
                 body.push(dataChunk);
             });
             req.on('end', () => {
+                // Raggruppo chunk
                 const parsedBody = Buffer.concat(body).toString();
                 console.log(parsedBody);
                 res.write('<html lang="en">');
