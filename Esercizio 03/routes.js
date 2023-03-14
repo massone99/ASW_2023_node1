@@ -17,7 +17,7 @@ const requestHandler = (req, res) => {
                 const parsedBody = Buffer.concat(body).toString();
                 console.log(parsedBody);
                 res.write('<html lang="en">');
-                res.write('<body><h1>' + parsedBody.split('=')[1] + '</h1></body>');
+                res.write('<h1>' + parsedBody.split('=')[1] + '</h1>');
                 res.write('</html>');
                 res.end();
             });
